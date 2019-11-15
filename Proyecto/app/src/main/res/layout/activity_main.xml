@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ADF5ABAB"
+        android:drawableLeft="@android:drawable/stat_notify_sync_noanim"
+        android:onClick="goToVolleyScreen"
+        android:text="Reload"></Button>
+
+    <Button
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:background="#ADF5ABAB"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:onClick="goToService"
+        android:text="Service" ></Button>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:id="@+id/searchText"
+                    />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ADF5ABAB"
+                    android:drawableLeft="@android:drawable/ic_menu_search"
+                    android:onClick="doAction"
+                    android:text="Search" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/recycler_item_view"
+                android:id="@+id/recycler_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
