@@ -48,16 +48,16 @@ public class VolleyActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
 
                         try {
-                            JSONArray jsonArray = response.getJSONArray("Businesses");
+                            JSONArray jsonArray = response.getJSONArray("Maquinarias");
                             Product[] businesses = new Product[jsonArray.length()];
                             for (int i = 0; i < jsonArray.length(); i++) {
 
                                 JSONObject b = jsonArray.getJSONObject(i);
 
                                 String id = b.getString("MaquinariaId");
-                                String name = b.getString("BusinessName");
-                                String desc = b.getString("BusinessDescription");
-                                String image = b.getString("BusinessImage");
+                                String name = b.getString("MaquinariaName");
+                                String desc = b.getString("MaquinariaDesc");
+                                String image = b.getString("MaquinariaImg");
 
                                 Product maquinaria = new Product();
                                 maquinaria.maquinariaId = id;
