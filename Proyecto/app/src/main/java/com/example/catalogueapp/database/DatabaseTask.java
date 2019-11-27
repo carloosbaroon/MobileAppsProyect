@@ -27,7 +27,7 @@ public class DatabaseTask extends AsyncTask<Product,Void, List<Product>> {
         {
             for(int i = 0; i < params.length; i++){
                 db.productDao().updateWithoutRanking(
-                        params[i].businessId,
+                        params[i].maquinariaId,
                         params[i].businessName,
                         params[i].businessDescription,
                         params[i].businessImage);

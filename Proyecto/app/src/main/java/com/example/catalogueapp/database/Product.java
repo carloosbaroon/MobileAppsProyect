@@ -10,8 +10,8 @@ public class Product {
 
     @PrimaryKey
     @NonNull
-    @ColumnInfo(name="businessId")
-    public String businessId;
+    @ColumnInfo(name="maquinariaId")
+    public String maquinariaId;
 
     @ColumnInfo(name = "businessName")
     public String businessName;

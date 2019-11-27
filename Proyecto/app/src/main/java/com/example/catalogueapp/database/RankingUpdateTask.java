@@ -14,13 +14,13 @@ public class RankingUpdateTask extends AsyncTask<Product,Void, List<Product>> {
     String id;
     int rating;
 
-    public RankingUpdateTask(Context ctx , DatabaseReceiver receiver, String businessId, int businessRating){
+    public RankingUpdateTask(Context ctx , DatabaseReceiver receiver, String maquinariaId, int businessRating){
         this.receiver = receiver;
         db = Room.databaseBuilder(ctx,
                 CatalogueDatabase.class ,
                 "catalogue-database").build();
 
-        id = businessId;
+        id = maquinariaId;
         rating = businessRating;
     }
 

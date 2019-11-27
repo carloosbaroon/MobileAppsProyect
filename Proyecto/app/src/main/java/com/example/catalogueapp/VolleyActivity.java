@@ -54,21 +54,21 @@ public class VolleyActivity extends AppCompatActivity {
 
                                 JSONObject b = jsonArray.getJSONObject(i);
 
-                                String id = b.getString("BusinessId");
+                                String id = b.getString("MaquinariaId");
                                 String name = b.getString("BusinessName");
                                 String desc = b.getString("BusinessDescription");
                                 String image = b.getString("BusinessImage");
 
-                                Product business = new Product();
-                                business.businessId = id;
-                                business.businessName = name;
-                                business.businessDescription = desc;
-                                business.businessImage = image;
-                                business.businessRanking = 3;
+                                Product maquinaria = new Product();
+                                maquinaria.maquinariaId = id;
+                                maquinaria.businessName = name;
+                                maquinaria.businessDescription = desc;
+                                maquinaria.businessImage = image;
+                                maquinaria.businessRanking = 3;
 
-                                businesses[i] = business;
+                                businesses[i] = maquinaria;
 
-                                contentText.append(business.businessName+"\n\n");
+                                contentText.append(maquinaria.businessName+"\n\n");
 
 
                             }

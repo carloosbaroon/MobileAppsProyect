@@ -29,7 +29,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private void updateShownData(){
 
-        final String id = getIntent().getExtras().getString("businessId");
+        final String id = getIntent().getExtras().getString("maquinariaId");
 
         final String name = getIntent().getExtras().getString("businessName");
         TextView nameView = findViewById(R.id.businessName);

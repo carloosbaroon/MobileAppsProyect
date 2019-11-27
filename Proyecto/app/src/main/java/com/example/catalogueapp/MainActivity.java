@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
                 new Observer<List<Product>>() {
                     @Override
                     public void onChanged(List<Product> companies) {
-                        intent.putExtra("businessId", companies.get(0).businessId);
+                        intent.putExtra("maquinariaId", companies.get(0).maquinariaId);
                         intent.putExtra("businessName", companies.get(0).businessName);
                         intent.putExtra("businessDescription", companies.get(0).businessDescription);
                         intent.putExtra("businessImage", companies.get(0).businessImage);

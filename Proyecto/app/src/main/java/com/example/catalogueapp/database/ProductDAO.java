@@ -17,10 +17,10 @@ public interface ProductDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public long[] insertProduct(Product... products);
 
-    @Query ("UPDATE product SET businessName=:name, businessDescription=:desc, businessImage = :img WHERE businessId = :id")
+    @Query ("UPDATE product SET businessName=:name, businessDescription=:desc, businessImage = :img WHERE maquinariaId = :id")
     public void updateWithoutRanking(String id, String name, String desc, String img);
 
-    @Query("UPDATE product SET businessRanking=:ranking WHERE businessId LIKE :id")
+    @Query("UPDATE product SET businessRanking=:ranking WHERE maquinariaId LIKE :id")
     public void updateRanking(String id, int ranking);
 
     @Query("SELECT * FROM product")
