@@ -25,6 +25,11 @@ public class DatabaseTask extends AsyncTask<Product,Void, List<Product>> {
 
         if(db.productDao().checkIfDatabaseNull() > 0)
         {
+            db.productDao().insertProduct(params);
+
+        }
+        else
+        {
             for(int i = 0; i < params.length; i++){
                 db.productDao().updateWithoutRanking(
                         params[i].businessId,
@@ -32,10 +37,7 @@ public class DatabaseTask extends AsyncTask<Product,Void, List<Product>> {
                         params[i].businessDescription,
                         params[i].businessImage);
             }
-        }
-        else
-        {
-            db.productDao().insertProduct(params);
+
         }
 
         return null;
@@ -44,3 +46,4 @@ public class DatabaseTask extends AsyncTask<Product,Void, List<Product>> {
     public void onPostExecute(List<Product> result){
     }
 }
+
