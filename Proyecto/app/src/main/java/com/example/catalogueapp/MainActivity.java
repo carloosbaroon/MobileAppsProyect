@@ -83,10 +83,10 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
                     @Override
                     public void onChanged(List<Product> companies) {
                         intent.putExtra("maquinariaId", companies.get(0).maquinariaId);
-                        intent.putExtra("businessName", companies.get(0).businessName);
-                        intent.putExtra("businessDescription", companies.get(0).businessDescription);
-                        intent.putExtra("businessImage", companies.get(0).businessImage);
-                        intent.putExtra("businessRanking", companies.get(0).businessRanking);
+                        intent.putExtra("maquinariaName", companies.get(0).maquinariaName);
+                        intent.putExtra("maquinariaDesc", companies.get(0).maquinariaDesc);
+                        intent.putExtra("maquinariaImg", companies.get(0).maquinariaImg);
+                        intent.putExtra("maquinariaRanking", companies.get(0).maquinariaRanking);
                         startActivity(intent);
                     }
                 });

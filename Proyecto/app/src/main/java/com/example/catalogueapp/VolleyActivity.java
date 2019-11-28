@@ -49,7 +49,7 @@ public class VolleyActivity extends AppCompatActivity {
 
                         try {
                             JSONArray jsonArray = response.getJSONArray("Maquinarias");
-                            Product[] businesses = new Product[jsonArray.length()];
+                            Product[] maquinarias = new Product[jsonArray.length()];
                             for (int i = 0; i < jsonArray.length(); i++) {
 
                                 JSONObject b = jsonArray.getJSONObject(i);
@@ -61,18 +61,18 @@ public class VolleyActivity extends AppCompatActivity {
 
                                 Product maquinaria = new Product();
                                 maquinaria.maquinariaId = id;
-                                maquinaria.businessName = name;
-                                maquinaria.businessDescription = desc;
-                                maquinaria.businessImage = image;
-                                maquinaria.businessRanking = 3;
+                                maquinaria.maquinariaName = name;
+                                maquinaria.maquinariaDesc = desc;
+                                maquinaria.maquinariaImg = image;
+                                maquinaria.maquinariaRanking = 3;
 
-                                businesses[i] = maquinaria;
+                                maquinarias[i] = maquinaria;
 
-                                contentText.append(maquinaria.businessName+"\n\n");
+                                contentText.append(maquinaria.maquinariaName+"\n\n");
 
 
                             }
-                            databaseTask.execute(businesses);
+                            databaseTask.execute(maquinarias);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

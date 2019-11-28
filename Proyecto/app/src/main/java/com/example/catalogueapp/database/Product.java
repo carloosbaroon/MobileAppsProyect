@@ -13,15 +13,15 @@ public class Product {
     @ColumnInfo(name="maquinariaId")
     public String maquinariaId;
 
-    @ColumnInfo(name = "businessName")
-    public String businessName;
+    @ColumnInfo(name = "maquinariaName")
+    public String maquinariaName;
 
-    @ColumnInfo(name = "businessDescription")
-    public String businessDescription;
+    @ColumnInfo(name = "maquinariaDesc")
+    public String maquinariaDesc;
 
-    @ColumnInfo(name="businessImage")
-    public String businessImage;
+    @ColumnInfo(name="maquinariaImg")
+    public String maquinariaImg;
 
-    @ColumnInfo(name="businessRanking")
-    public int businessRanking;
+    @ColumnInfo(name="maquinariaRanking")
+    public int maquinariaRanking;
 }

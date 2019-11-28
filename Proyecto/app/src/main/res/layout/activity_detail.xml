@@ -24,7 +24,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/businessName"
+                android:id="@+id/maquinariaName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -75,6 +75,11 @@
                         android:stepSize="1"
                         />
 
+                    <Button
+                        android:id="@+id/mapButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mapas" />
                 </LinearLayout>
             </ScrollView>
 

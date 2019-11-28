@@ -29,9 +29,9 @@ public class ProductCatalogueAdapter extends RecyclerView.Adapter {
         ProductViewHolder pHolder = (ProductViewHolder)holder;
         if( products != null){
             Product p = products.get(position);
-            pHolder.productName.setText(p.businessName);
-            Picasso.get().load(p.businessImage).into(pHolder.recyclerImage);
-            pHolder.recyclerRating.setText("Stars : "+p.businessRanking);
+            pHolder.productName.setText(p.maquinariaName);
+            Picasso.get().load(p.maquinariaImg).into(pHolder.recyclerImage);
+            pHolder.recyclerRating.setText("Stars : "+p.maquinariaRanking);
 
         }else{
             pHolder.productName.setText("NONE");
