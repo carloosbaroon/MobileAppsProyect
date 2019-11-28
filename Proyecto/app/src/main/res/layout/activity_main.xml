@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#123456">
 
     <Button
         android:layout_width="190dp"
@@ -13,21 +14,12 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#ADF5ABAB"
+        android:background="#04ea00"
         android:drawableLeft="@android:drawable/stat_notify_sync_noanim"
         android:onClick="goToVolleyScreen"
-        android:text="Reload"></Button>
+        android:text="Reload"
+        android:textColor="#FFFFFF"></Button>
 
-    <Button
-
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_weight="1"
-        android:background="#ADF5ABAB"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:onClick="goToService"
-        android:text="Service" ></Button>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -55,10 +47,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#ADF5ABAB"
+                    android:background="#04ea00"
                     android:drawableLeft="@android:drawable/ic_menu_search"
                     android:onClick="doAction"
-                    android:text="Search" />
+                    android:text="Search"
+                    android:textColor="#FFFFFF" />
 
 
             </LinearLayout>

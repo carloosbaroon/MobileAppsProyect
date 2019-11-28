@@ -8,7 +8,7 @@
     android:paddingRight="64dp"
     android:paddingLeft="64dp"
     android:paddingTop="16dp"
-    android:background="#9CCC65"
+    android:background="#123456"
     tools:context=".SplashActivity">
 
     <ImageView

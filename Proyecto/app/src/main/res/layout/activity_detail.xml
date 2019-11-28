@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".DetailActivity">
+    tools:context=".DetailActivity"
+    android:background="#123456">
 
 
     <ScrollView
@@ -28,10 +29,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:paddingLeft="20dp"
                 android:text="Business"
                 android:textAllCaps="false"
-                android:textSize="36sp"
-                android:paddingLeft="20dp"/>
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
 
             <View
                 android:id="@+id/divider4"
@@ -53,10 +55,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#00FFFFFF"
+                        android:paddingLeft="20dp"
                         android:text="Description"
                         android:textAllCaps="false"
-                        android:textSize="18sp"
-                        android:paddingLeft="20dp"/>
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -77,9 +80,11 @@
 
                     <Button
                         android:id="@+id/mapButton"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mapas" />
+                        android:background="#04ea00"
+                        android:text="Mapas"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
             </ScrollView>
 
