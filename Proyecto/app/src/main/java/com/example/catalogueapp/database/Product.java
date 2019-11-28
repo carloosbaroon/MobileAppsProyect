@@ -10,18 +10,24 @@ public class Product {
 
     @PrimaryKey
     @NonNull
-    @ColumnInfo(name="maquinariaId")
+    @ColumnInfo(name="MaquinariaId")
     public String maquinariaId;
 
-    @ColumnInfo(name = "maquinariaName")
+    @ColumnInfo(name = "MaquinariaName")
     public String maquinariaName;
 
-    @ColumnInfo(name = "maquinariaDesc")
+    @ColumnInfo(name = "MaquinariaDesc")
     public String maquinariaDesc;
 
-    @ColumnInfo(name="maquinariaImg")
+    @ColumnInfo(name="MaquinariaImg")
     public String maquinariaImg;
 
-    @ColumnInfo(name="maquinariaRanking")
+    @ColumnInfo(name="MaquinariaRanking")
     public int maquinariaRanking;
+
+    @ColumnInfo(name="MaquinariaLat")
+    public String maquinariaLat;
+
+    @ColumnInfo(name="MaquinariaLong")
+    public String maquinariaLong;
 }

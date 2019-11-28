@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -58,6 +59,8 @@ public class VolleyActivity extends AppCompatActivity {
                                 String name = b.getString("MaquinariaName");
                                 String desc = b.getString("MaquinariaDesc");
                                 String image = b.getString("MaquinariaImg");
+                                String latitud = b.getString("MaquinariaLat");
+                                String longitud = b.getString("MaquinariaLong");
 
                                 Product maquinaria = new Product();
                                 maquinaria.maquinariaId = id;
@@ -65,13 +68,19 @@ public class VolleyActivity extends AppCompatActivity {
                                 maquinaria.maquinariaDesc = desc;
                                 maquinaria.maquinariaImg = image;
                                 maquinaria.maquinariaRanking = 3;
+                                maquinaria.maquinariaLat = latitud;
+                                maquinaria.maquinariaLong = longitud;
 
                                 maquinarias[i] = maquinaria;
 
                                 contentText.append(maquinaria.maquinariaName+"\n\n");
 
+                                //Log.d("DB" , "Latitud: " + maquinaria.maquinariaLat);
+                                //Log.d("DB" , "Longitud: " + maquinaria.maquinariaLong);
+
 
                             }
+
                             databaseTask.execute(maquinarias);
 
                         } catch (JSONException e) {
