@@ -17,7 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.catalogueapp.database.CatalogueDatabase;
 import com.example.catalogueapp.database.DatabaseReceiver;
@@ -91,11 +90,6 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
                         startActivity(intent);
                     }
                 });
-
-    }
-
-    public void showRegisterToast() {
-        Toast.makeText(MainActivity.this,"Registraté para ver detalles",Toast.LENGTH_SHORT).show();
 
     }
 
