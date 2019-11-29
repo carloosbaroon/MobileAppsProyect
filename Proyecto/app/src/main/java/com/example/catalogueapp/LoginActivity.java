@@ -41,8 +41,8 @@ public class LoginActivity extends AppCompatActivity {
         mTextViewInvitado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerIntent = new Intent( LoginActivity.this, RegisterActivity.class);
-                startActivity(registerIntent);
+                Intent maquinariaWODetail = new Intent( LoginActivity.this, MaquinariaAdapterWODetail.class);
+                startActivity(maquinariaWODetail);
 
             }
         });
