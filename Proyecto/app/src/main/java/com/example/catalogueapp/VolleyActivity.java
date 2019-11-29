@@ -75,8 +75,8 @@ public class VolleyActivity extends AppCompatActivity {
 
                                 contentText.append(maquinaria.maquinariaName+"\n\n");
 
-                                //Log.d("DB" , "Latitud: " + maquinaria.maquinariaLat);
-                                //Log.d("DB" , "Longitud: " + maquinaria.maquinariaLong);
+                                Log.d("DB" , "Latitud: " + maquinaria.maquinariaLat);
+                                Log.d("DB" , "Longitud: " + maquinaria.maquinariaLong);
 
 
                             }

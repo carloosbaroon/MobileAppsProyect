@@ -1,5 +1,6 @@
 package com.example.catalogueapp;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,6 +77,7 @@ public class ProductCatalogueAdapter extends RecyclerView.Adapter {
     }
 
     void setProducts(List<Product> products){
+        Log.d("Adapter" , " Llega a SetProducts? ");
         this.products = products;
         notifyDataSetChanged();
     }

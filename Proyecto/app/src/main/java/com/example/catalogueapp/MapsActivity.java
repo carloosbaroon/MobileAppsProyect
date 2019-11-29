@@ -51,6 +51,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        final String maquinariaLat = getIntent().getExtras().getString("maquinariaLat");
+        final String maquinariaLong = getIntent().getExtras().getString("maquinariaLong");
+
         mMap = googleMap;
 
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
@@ -59,9 +62,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         uiSettings.setZoomControlsEnabled(true);
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-63.049092, -60.958994);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        LatLng localizacion = new LatLng(Double.parseDouble(maquinariaLat), Double.parseDouble(maquinariaLong));
+        mMap.addMarker(new MarkerOptions().position(localizacion).title("Tractor").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(localizacion));
     }
 }

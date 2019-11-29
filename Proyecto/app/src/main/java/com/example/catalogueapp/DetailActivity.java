@@ -29,12 +29,16 @@ public class DetailActivity extends AppCompatActivity {
 
         businessesModel = ViewModelProviders.of(this).get(ProductViewModel.class);
 
-        maps = (Button)findViewById(R.id.mapButton);
+        final String maqLat = getIntent().getExtras().getString("maquinariaLat");
+        final String maqLong = getIntent().getExtras().getString("maquinariaLong");
 
+        maps = (Button)findViewById(R.id.mapButton);
         maps.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view){
                 Intent intent = new Intent(DetailActivity.this,MapsActivity.class);
+                intent.putExtra("maquinariaLat",maqLat);
+                intent.putExtra("maquinariaLong",maqLong);
                 startActivity(intent);
             }
         });

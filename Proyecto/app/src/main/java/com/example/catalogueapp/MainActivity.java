@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
     }
     public void doAction(View view){
         String src = "%"+((EditText)findViewById(R.id.searchText)).getText()+"%";
+        Log.d("CLICKED" , "FROM VIEW " + view);
         products.searchProducts(getApplicationContext(),src).observe(this,
                 new Observer<List<Product>>() {
                     @Override
@@ -87,6 +88,8 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
                         intent.putExtra("maquinariaDesc", companies.get(0).maquinariaDesc);
                         intent.putExtra("maquinariaImg", companies.get(0).maquinariaImg);
                         intent.putExtra("maquinariaRanking", companies.get(0).maquinariaRanking);
+                        intent.putExtra("maquinariaLat", companies.get(0).maquinariaLat);
+                        intent.putExtra("maquinariaLong", companies.get(0).maquinariaLong);
                         startActivity(intent);
                     }
                 });
